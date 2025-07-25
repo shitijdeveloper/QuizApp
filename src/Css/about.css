@@ -1,0 +1,187 @@
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(to right, #4CAF50, #43a047);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 18px;
+    }
+
+    /* About Section */
+    .about-section {
+      padding: 60px 20px;
+      background-color: #fff;
+    }
+
+    .about-section h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .about-text p {
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 20px;
+      color: #555;
+    }
+
+    .about-img img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    }
+
+    /* Why Choose Us Section */
+    .why-us {
+      background-color: #f4f4f4;
+      padding: 60px 20px;
+    }
+
+    .why-us h2 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .why-card {
+      background-color: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .why-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .why-card i {
+      font-size: 40px;
+      color: #4CAF50;
+      margin-bottom: 15px;
+    }
+
+    .why-card h4 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .why-card p {
+      font-size: 15px;
+      color: #666;
+    }
+
+    /* Footer */
+    .footer {
+      background: #333;
+      color: white;
+      padding: 40px 0 20px;
+      margin-top: 40px;
+    }
+
+    .footer .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .footer-logo h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .footer-logo h2 span {
+      color: #4CAF50;
+    }
+
+    .footer-links ul {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+
+    .footer-links a {
+      color: #ccc;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .social-icons a {
+      color: white;
+      font-size: 20px;
+      margin-right: 15px;
+      transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #4CAF50;
+    }
+
+    .copyright {
+      text-align: center;
+      color: #aaa;
+      border-top: 1px solid #555;
+      padding-top: 15px;
+      margin-top: 30px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .about-content {
+        grid-template-columns: 1fr;
+      }
+
+      .footer .container {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+      }
+    }
