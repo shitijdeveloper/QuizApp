@@ -1,0 +1,125 @@
+.footer {
+  background: #1f2937; /* dark slate */
+  color: #f3f4f6;
+  padding: 40px 20px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+  margin-bottom: 30px;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.footer-logo h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.footer-logo h2 span {
+  color: #4CAF50;
+}
+
+.footer-logo p {
+  font-size: 14px;
+  color: #d1d5db;
+  margin: 6px 0;
+}
+
+.made-love {
+  font-size: 13px;
+  color: #9ca3af;
+  margin-top: 8px;
+  font-style: italic;
+}
+
+.footer-links h3,
+.footer-social h3,
+.footer-newsletter h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #9ca3af;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+  padding-left: 5px;
+}
+
+.footer-newsletter p {
+  font-size: 14px;
+  color: #d1d5db;
+  margin-bottom: 10px;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.newsletter-form input {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  font-size: 14px;
+}
+
+.newsletter-form button {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.newsletter-form button:hover {
+  background: #22c55e;
+}
+
+.footer-social .social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #4CAF50;
+  transform: scale(1.2);
+}
+
+.copyright {
+  text-align: center;
+  color: #9ca3af;
+  border-top: 1px solid #374151;
+  padding-top: 20px;
+  font-size: 14px;
+}
