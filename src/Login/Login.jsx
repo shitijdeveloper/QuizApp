@@ -16,9 +16,10 @@ const Login = () => {
     e.preventDefault();
       try {
         const responese=await axios.post("http://localhost:5000/api/login", formData)
-        localStorage.setItem("userDetails", JSON.stringify(responese.data) )
+        localStorage.setItem("userDetails", JSON.stringify(responese.data.user) )
         if (responese.status === 200 && 201) {
             alert("Login successFully")
+            navigate("/")
         }else{
           alert("failed")
         }
