@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../Css/Register.css";
+import axios from "axios";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -8,7 +9,6 @@ const Register = () => {
     name: "",
     email: "",
     password: "",
-    confirmPassword: "",
   });
 
   const [error, setError] = useState("");
@@ -17,23 +17,26 @@ const Register = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleRegister = (e) => {
+  const handleRegister = async(e) => {
     e.preventDefault();
-    const { name, email, password, confirmPassword } = formData;
+    try {
+      const { name, email, password,} = formData;
 
-    if (!name || !email || !password || !confirmPassword) {
+    if (!name || !email || !password ) {
       setError("All fields are required!");
       return;
     }
-
-    if (password !== confirmPassword) {
-      setError("Passwords do not match!");
-      return;
+    const responese=await axios.post("http://localhost:5000/api/register",formData)
+    if (responese.status === 200 && 201) {
+      alert("success")
+    }else{
+      alert("failed")
     }
-
-    // ✅ Dummy success action (replace with real API)
-    console.log("User Registered:", formData);
     navigate("/login");
+    } catch (error) {
+      
+    }
+    
   };
 
   return (
@@ -67,13 +70,7 @@ const Register = () => {
           onChange={handleChange}
         />
 
-        <input
-          type="password"
-          name="confirmPassword"
-          placeholder="Confirm Password"
-          value={formData.confirmPassword}
-          onChange={handleChange}
-        />
+      
 
         <button type="submit" className="btn signup-btn">Sign Up</button>
 

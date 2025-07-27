@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../Css/Login.css";
+import axios from "axios";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -11,22 +12,21 @@ const Login = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleLogin = (e) => {
+  const handleLogin = async(e) => {
     e.preventDefault();
-    const { email, password } = formData;
-
-    if (!email || !password) {
-      setError("All fields are required!");
-      return;
-    }
-
-    // ✅ Sample login logic (replace with real API)
-    if (email === "user@example.com" && password === "password123") {
-      // Save token or user state if needed
-      navigate("/");
-    } else {
-      setError("Invalid email or password");
-    }
+      try {
+        const responese=await axios.post("http://localhost:5000/api/login", formData)
+        localStorage.setItem("userDetails", JSON.stringify(responese.data) )
+        if (responese.status === 200 && 201) {
+            alert("Login successFully")
+        }else{
+          alert("failed")
+        }
+      } catch (error) {
+        console.error(error);
+        
+      }
+  
   };
 
   return (

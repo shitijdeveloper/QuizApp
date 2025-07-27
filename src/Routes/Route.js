@@ -6,7 +6,8 @@ import Layout from "../Layout/layout"; // Import the layout
 import Login from "../Login/Login";
 import Register from "../Register/Register";
 import WhyUs from "../Components/WhyUs";
-
+import QuizStart from "../Quiz/Quiz";
+import QuizQuestions from "../Quiz/QuizQuestion";
 const AppRoutes = () => {
   return (
     <Routes>
@@ -17,6 +18,8 @@ const AppRoutes = () => {
         <Route path="login" element={<Login />} />
         <Route path="signup" element={<Register />} />
         <Route path="whyus" element={<WhyUs />} />
+        <Route path="/quiz" element={<QuizStart />} />
+        <Route path="/quiz/start" element={<QuizQuestions />} />
       </Route>
     </Routes>
   );

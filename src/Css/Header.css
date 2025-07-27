@@ -81,3 +81,13 @@
 .logo-bytebattles .battles {
   color: #111827; /* black/dark */
 }
+.username {
+  margin-right: 10px;
+  color: white;
+  font-weight: bold;
+}
+
+.logout {
+  background-color: #e74c3c;
+  color: white;
+}
